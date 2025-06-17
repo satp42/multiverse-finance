@@ -3,3 +3,4 @@
 /* eslint-disable */
 export * as introspection from "./introspection";
 export * as math from "./math";
+export { ReentrancyGuard__factory } from "./ReentrancyGuard__factory";

@@ -12,6 +12,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -48,6 +49,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -87,6 +89,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -125,6 +128,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -169,6 +173,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -205,6 +210,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -243,6 +249,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -284,6 +291,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -322,6 +330,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -360,6 +369,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -398,6 +408,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -437,6 +448,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -473,6 +485,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -509,6 +522,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -545,6 +559,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -584,6 +599,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -620,6 +636,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -656,6 +673,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -692,6 +710,7 @@
             "enabled": true,
             "runs": 200
           },
+          "viaIR": true,
           "evmVersion": "paris",
           "outputSelection": {
             "*": {
@@ -717,6 +736,126 @@
       ],
       "artifacts": [
         "IERC1155Receiver"
+      ]
+    },
+    "/Users/satwikpanigrahi/Desktop/multiverse-finance/apps/contracts/contracts/MultiverseAMM.sol": {
+      "lastModificationDate": 1750129583789,
+      "contentHash": "8270406ca9b1c56d267a78ee82192959",
+      "sourceName": "contracts/MultiverseAMM.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
+        "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "./ConditionalToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "MultiverseAMM"
+      ]
+    },
+    "/Users/satwikpanigrahi/Desktop/multiverse-finance/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1750127755783,
+      "contentHash": "190613e556d509d9e9a0ea43dc5d891d",
+      "sourceName": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/satwikpanigrahi/Desktop/multiverse-finance/node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol": {
+      "lastModificationDate": 1750127753872,
+      "contentHash": "2d5c4c9aa5ff17fc77d595a1915d9d4e",
+      "sourceName": "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "viaIR": true,
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../utils/introspection/ERC165.sol",
+        "../IERC1155Receiver.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC1155Holder"
       ]
     }
   }

@@ -2,4 +2,5 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { ConditionalToken } from "./ConditionalToken";
+export type { MultiverseAMM } from "./MultiverseAMM";
 export type { Sample } from "./Sample";

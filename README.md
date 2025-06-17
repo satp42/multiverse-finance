@@ -56,6 +56,15 @@ npm run build
   - **Fixed**: Added VerseEvaporated events for off-chain indexing
   - **Note**: Partition validation and oracle integration planned for later tasks
 
+- ✅ **MultiverseAMM** - Verse-scoped Automated Market Maker
+  - Constant product AMM (x * y = k) with 0.3% fee
+  - Verse-isolated liquidity pools prevent cross-verse contamination
+  - Add/remove liquidity with LP share tokens
+  - Swap functionality within verse boundaries
+  - **Deployed locally** with pool creation and basic operations tested
+  - Automatic pool evaporation when verses resolve
+  - Integrates with ConditionalToken for verse validation
+
 ### Current Status
 The ConditionalToken contract implements the core [Multiverse Finance](https://www.paradigm.xyz/2025/05/multiverse-finance) mechanics:
 
@@ -64,10 +73,12 @@ The ConditionalToken contract implements the core [Multiverse Finance](https://w
 **Ownership Combining**: Pull ownership from child verses back to parent  
 **Event Resolution**: Resolve outcomes and evaporate losing verses
 
-Test the contract:
+Test the contracts:
 ```bash
 cd apps/contracts
 npm test                              # Run unit tests
-npx hardhat run scripts/deploy.ts     # Deploy and setup example
+npx hardhat run scripts/deploy.ts     # Deploy ConditionalToken with example
+npx hardhat run scripts/deploy-amm.ts # Deploy both contracts  
+npx hardhat run scripts/test-amm.ts   # Test AMM functionality
 npx hardhat run scripts/test-interactions.ts  # Interactive demo
 ``` 

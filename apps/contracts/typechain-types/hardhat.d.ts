@@ -46,6 +46,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC1155Receiver__factory>;
     getContractFactory(
+      name: "ERC1155Holder",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ERC1155Holder__factory>;
+    getContractFactory(
       name: "ERC165",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ERC165__factory>;
@@ -58,9 +62,17 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SafeCast__factory>;
     getContractFactory(
+      name: "ReentrancyGuard",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ReentrancyGuard__factory>;
+    getContractFactory(
       name: "ConditionalToken",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ConditionalToken__factory>;
+    getContractFactory(
+      name: "MultiverseAMM",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MultiverseAMM__factory>;
     getContractFactory(
       name: "Sample",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -107,6 +119,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IERC1155Receiver>;
     getContractAt(
+      name: "ERC1155Holder",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ERC1155Holder>;
+    getContractAt(
       name: "ERC165",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -122,10 +139,20 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.SafeCast>;
     getContractAt(
+      name: "ReentrancyGuard",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ReentrancyGuard>;
+    getContractAt(
       name: "ConditionalToken",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.ConditionalToken>;
+    getContractAt(
+      name: "MultiverseAMM",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MultiverseAMM>;
     getContractAt(
       name: "Sample",
       address: string | ethers.Addressable,
@@ -165,6 +192,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC1155Receiver>;
     deployContract(
+      name: "ERC1155Holder",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ERC1155Holder>;
+    deployContract(
       name: "ERC165",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.ERC165>;
@@ -177,9 +208,17 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SafeCast>;
     deployContract(
+      name: "ReentrancyGuard",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ReentrancyGuard>;
+    deployContract(
       name: "ConditionalToken",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.ConditionalToken>;
+    deployContract(
+      name: "MultiverseAMM",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MultiverseAMM>;
     deployContract(
       name: "Sample",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -226,6 +265,11 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC1155Receiver>;
     deployContract(
+      name: "ERC1155Holder",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ERC1155Holder>;
+    deployContract(
       name: "ERC165",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -241,10 +285,20 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SafeCast>;
     deployContract(
+      name: "ReentrancyGuard",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ReentrancyGuard>;
+    deployContract(
       name: "ConditionalToken",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.ConditionalToken>;
+    deployContract(
+      name: "MultiverseAMM",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.MultiverseAMM>;
     deployContract(
       name: "Sample",
       args: any[],
