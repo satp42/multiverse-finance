@@ -77,6 +77,10 @@ declare module "hardhat/types/runtime" {
       name: "Sample",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Sample__factory>;
+    getContractFactory(
+      name: "UBIManager",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.UBIManager__factory>;
 
     getContractAt(
       name: "Ownable",
@@ -158,6 +162,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.Sample>;
+    getContractAt(
+      name: "UBIManager",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.UBIManager>;
 
     deployContract(
       name: "Ownable",
@@ -223,6 +232,10 @@ declare module "hardhat/types/runtime" {
       name: "Sample",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Sample>;
+    deployContract(
+      name: "UBIManager",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.UBIManager>;
 
     deployContract(
       name: "Ownable",
@@ -304,6 +317,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Sample>;
+    deployContract(
+      name: "UBIManager",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.UBIManager>;
 
     // default types
     getContractFactory(

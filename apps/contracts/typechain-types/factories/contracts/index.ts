@@ -4,3 +4,4 @@
 export { ConditionalToken__factory } from "./ConditionalToken__factory";
 export { MultiverseAMM__factory } from "./MultiverseAMM__factory";
 export { Sample__factory } from "./Sample__factory";
+export { UBIManager__factory } from "./UBIManager__factory";

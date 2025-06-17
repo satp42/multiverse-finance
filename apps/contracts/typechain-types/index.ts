@@ -38,3 +38,5 @@ export type { MultiverseAMM } from "./contracts/MultiverseAMM";
 export { MultiverseAMM__factory } from "./factories/contracts/MultiverseAMM__factory";
 export type { Sample } from "./contracts/Sample";
 export { Sample__factory } from "./factories/contracts/Sample__factory";
+export type { UBIManager } from "./contracts/UBIManager";
+export { UBIManager__factory } from "./factories/contracts/UBIManager__factory";

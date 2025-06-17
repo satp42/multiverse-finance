@@ -65,6 +65,15 @@ npm run build
   - Automatic pool evaporation when verses resolve
   - Integrates with ConditionalToken for verse validation
 
+- ✅ **UBIManager** - Event-Conditional Universal Basic Income System
+  - Create UBI programs tied to specific event outcomes
+  - Mint conditional tokens that only pay out if events occur
+  - Batch processing for efficient distribution
+  - Budget tracking and claim prevention
+  - **Deployed locally** with event-conditional UBI token minting tested
+  - Access control for authorized minters and program management
+  - Integration with ConditionalToken for verse validation
+
 ### Current Status
 The ConditionalToken contract implements the core [Multiverse Finance](https://www.paradigm.xyz/2025/05/multiverse-finance) mechanics:
 
@@ -76,9 +85,11 @@ The ConditionalToken contract implements the core [Multiverse Finance](https://w
 Test the contracts:
 ```bash
 cd apps/contracts
-npm test                              # Run unit tests
+npm test                              # Run unit tests (29 passing)
 npx hardhat run scripts/deploy.ts     # Deploy ConditionalToken with example
-npx hardhat run scripts/deploy-amm.ts # Deploy both contracts  
+npx hardhat run scripts/deploy-amm.ts # Deploy AMM + ConditionalToken
+npx hardhat run scripts/deploy-ubi.ts # Deploy UBI + ConditionalToken
 npx hardhat run scripts/test-amm.ts   # Test AMM functionality
+npx hardhat run scripts/test-ubi.ts   # Test Event-Conditional UBI system
 npx hardhat run scripts/test-interactions.ts  # Interactive demo
 ``` 
