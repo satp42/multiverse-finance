@@ -36,6 +36,8 @@ export type { ConditionalToken } from "./contracts/ConditionalToken";
 export { ConditionalToken__factory } from "./factories/contracts/ConditionalToken__factory";
 export type { MultiverseAMM } from "./contracts/MultiverseAMM";
 export { MultiverseAMM__factory } from "./factories/contracts/MultiverseAMM__factory";
+export type { OracleManager } from "./contracts/OracleManager";
+export { OracleManager__factory } from "./factories/contracts/OracleManager__factory";
 export type { Sample } from "./contracts/Sample";
 export { Sample__factory } from "./factories/contracts/Sample__factory";
 export type { UBIManager } from "./contracts/UBIManager";

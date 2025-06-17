@@ -3,5 +3,6 @@
 /* eslint-disable */
 export { ConditionalToken__factory } from "./ConditionalToken__factory";
 export { MultiverseAMM__factory } from "./MultiverseAMM__factory";
+export { OracleManager__factory } from "./OracleManager__factory";
 export { Sample__factory } from "./Sample__factory";
 export { UBIManager__factory } from "./UBIManager__factory";

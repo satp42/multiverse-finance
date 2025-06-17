@@ -74,22 +74,48 @@ npm run build
   - Access control for authorized minters and program management
   - Integration with ConditionalToken for verse validation
 
-### Current Status
-The ConditionalToken contract implements the core [Multiverse Finance](https://www.paradigm.xyz/2025/05/multiverse-finance) mechanics:
+- ✅ **OracleManager** - Event Resolution and Verse Management System
+  - Register events with authorized oracles for resolution
+  - Secure event resolution with access control and double-resolution prevention
+  - Integration with ConditionalToken for automatic verse resolution
+  - Multi-oracle support with independent event assignment
+  - **Deployed locally** with event resolution functionality tested
+  - Event status tracking and outcome verification
+  - Security features prevent unauthorized resolution
 
-**Verse Management**: Create parallel universes for different event outcomes  
-**Ownership Splitting**: Push ownership from parent verse to child verses  
-**Ownership Combining**: Pull ownership from child verses back to parent  
-**Event Resolution**: Resolve outcomes and evaporate losing verses
+### Current Status
+**Phase: Smart Contract Development - COMPLETE ✅**
+
+The smart contract layer implements the complete [Multiverse Finance](https://www.paradigm.xyz/2025/05/multiverse-finance) system:
+
+**Core Mechanics** (ConditionalToken):
+- **Verse Management**: Create parallel universes for different event outcomes  
+- **Ownership Splitting**: Push ownership from parent verse to child verses  
+- **Ownership Combining**: Pull ownership from child verses back to parent  
+- **Event Resolution**: Resolve outcomes and evaporate losing verses
+
+**Financial Layer** (MultiverseAMM, UBIManager):
+- **Verse-Scoped Trading**: AMM with isolated liquidity pools per verse
+- **Event-Conditional UBI**: Government/organization UBI tied to future events
+- **Risk-Free Composability**: Tokens in same verse can be used as collateral
+
+**Oracle Integration** (OracleManager):
+- **Secure Event Resolution**: Authorized oracles resolve real-world events
+- **Multi-Oracle Support**: Different oracles handle different event types
+- **Security Features**: Prevent unauthorized resolution and double resolution
+
+**Next Phase**: SDK Development and Frontend Integration
 
 Test the contracts:
 ```bash
 cd apps/contracts
-npm test                              # Run unit tests (29 passing)
+npm test                              # Run unit tests (42 passing)
 npx hardhat run scripts/deploy.ts     # Deploy ConditionalToken with example
 npx hardhat run scripts/deploy-amm.ts # Deploy AMM + ConditionalToken
 npx hardhat run scripts/deploy-ubi.ts # Deploy UBI + ConditionalToken
+npx hardhat run scripts/deploy-oracle.ts # Deploy Oracle + ConditionalToken
 npx hardhat run scripts/test-amm.ts   # Test AMM functionality
 npx hardhat run scripts/test-ubi.ts   # Test Event-Conditional UBI system
+npx hardhat run scripts/test-oracle.ts # Test Event Resolution system
 npx hardhat run scripts/test-interactions.ts  # Interactive demo
 ``` 

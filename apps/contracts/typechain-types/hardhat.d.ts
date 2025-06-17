@@ -74,6 +74,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MultiverseAMM__factory>;
     getContractFactory(
+      name: "OracleManager",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.OracleManager__factory>;
+    getContractFactory(
       name: "Sample",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Sample__factory>;
@@ -158,6 +162,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.MultiverseAMM>;
     getContractAt(
+      name: "OracleManager",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.OracleManager>;
+    getContractAt(
       name: "Sample",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -229,6 +238,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.MultiverseAMM>;
     deployContract(
+      name: "OracleManager",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.OracleManager>;
+    deployContract(
       name: "Sample",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.Sample>;
@@ -312,6 +325,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.MultiverseAMM>;
+    deployContract(
+      name: "OracleManager",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.OracleManager>;
     deployContract(
       name: "Sample",
       args: any[],
