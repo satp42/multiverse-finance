@@ -63,6 +63,7 @@ export interface ConditionalTokenInterface extends Interface {
       | "TransferSingle"
       | "URI"
       | "VerseCreated"
+      | "VerseEvaporated"
       | "VerseResolved"
   ): EventFragment;
 
@@ -407,6 +408,18 @@ export namespace VerseCreatedEvent {
   export interface OutputObject {
     verseId: string;
     parent: string;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
+export namespace VerseEvaporatedEvent {
+  export type InputTuple = [verseId: BytesLike];
+  export type OutputTuple = [verseId: string];
+  export interface OutputObject {
+    verseId: string;
   }
   export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
   export type Filter = TypedDeferredTopicFilter<Event>;
@@ -825,6 +838,13 @@ export interface ConditionalToken extends BaseContract {
     VerseCreatedEvent.OutputObject
   >;
   getEvent(
+    key: "VerseEvaporated"
+  ): TypedContractEvent<
+    VerseEvaporatedEvent.InputTuple,
+    VerseEvaporatedEvent.OutputTuple,
+    VerseEvaporatedEvent.OutputObject
+  >;
+  getEvent(
     key: "VerseResolved"
   ): TypedContractEvent<
     VerseResolvedEvent.InputTuple,
@@ -930,6 +950,17 @@ export interface ConditionalToken extends BaseContract {
       VerseCreatedEvent.InputTuple,
       VerseCreatedEvent.OutputTuple,
       VerseCreatedEvent.OutputObject
+    >;
+
+    "VerseEvaporated(bytes32)": TypedContractEvent<
+      VerseEvaporatedEvent.InputTuple,
+      VerseEvaporatedEvent.OutputTuple,
+      VerseEvaporatedEvent.OutputObject
+    >;
+    VerseEvaporated: TypedContractEvent<
+      VerseEvaporatedEvent.InputTuple,
+      VerseEvaporatedEvent.OutputTuple,
+      VerseEvaporatedEvent.OutputObject
     >;
 
     "VerseResolved(bytes32,bytes32)": TypedContractEvent<

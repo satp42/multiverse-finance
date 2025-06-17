@@ -22,6 +22,7 @@ contract ConditionalToken is ERC1155, Ownable {
     event VerseCreated(bytes32 indexed verseId, bytes32 indexed parent);
     event PartitionCreated(bytes32 indexed parent, bytes32[] children);
     event VerseResolved(bytes32 indexed verseId, bytes32 outcome);
+    event VerseEvaporated(bytes32 indexed verseId);
     event OwnershipSplit(address indexed user, bytes32 indexed parent, bytes32[] children, uint256 amount);
     event OwnershipCombined(address indexed user, bytes32[] children, bytes32 indexed parent, uint256 amount);
 
@@ -140,6 +141,7 @@ contract ConditionalToken is ERC1155, Ownable {
         if (!verses[verseId].exists || verses[verseId].resolved) return;
         
         verses[verseId].resolved = true;
+        emit VerseEvaporated(verseId);
         
         bytes32[] memory children = verses[verseId].children;
         for (uint256 i = 0; i < children.length; i++) {

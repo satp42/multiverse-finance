@@ -49,6 +49,8 @@ describe("ConditionalToken", function () {
       expect(await conditionalToken.partitions(ROOT_VERSE, POWELL_FIRED)).to.be.true;
       expect(await conditionalToken.partitions(ROOT_VERSE, POWELL_NOT_FIRED)).to.be.true;
     });
+
+
   });
 
   describe("Token Operations", function () {
@@ -121,7 +123,9 @@ describe("ConditionalToken", function () {
       await conditionalToken.mintToken(user.address, POWELL_FIRED, amount);
       await conditionalToken.mintToken(user.address, POWELL_NOT_FIRED, amount);
       
-      await conditionalToken.resolveVerse(ROOT_VERSE, POWELL_NOT_FIRED);
+      await expect(conditionalToken.resolveVerse(ROOT_VERSE, POWELL_NOT_FIRED))
+        .to.emit(conditionalToken, "VerseEvaporated")
+        .withArgs(POWELL_FIRED);
       
       const rootVerse = await conditionalToken.verses(ROOT_VERSE);
       const firedVerse = await conditionalToken.verses(POWELL_FIRED);

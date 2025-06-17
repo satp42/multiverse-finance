@@ -53,6 +53,8 @@ npm run build
   - Split/combine ownership mechanics (parent ↔ children)
   - Event resolution and verse evaporation
   - **Deployed locally** with mint/burn functionality tested
+  - **Fixed**: Added VerseEvaporated events for off-chain indexing
+  - **Note**: Partition validation and oracle integration planned for later tasks
 
 ### Current Status
 The ConditionalToken contract implements the core [Multiverse Finance](https://www.paradigm.xyz/2025/05/multiverse-finance) mechanics:
