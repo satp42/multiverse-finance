@@ -1,0 +1,10 @@
+
+
+> @multiverse/contracts@0.1.0 build
+> hardhat compile
+
+[1G[0KDownloading compiler 0.8.20
+Generating typings for: 1 artifacts in dir: typechain-types for target: ethers-v6
+Successfully generated 6 typings!
+Compiled 1 Solidity file successfully (evm target: paris).
+[1G[0K⠙[1G[0K
